@@ -58,7 +58,7 @@ def gen():
 
     img = cv2.imread("Inputs/orlando_bloom.jpg")
     img = cv2.resize(img, (0,0), fx=0.5, fy=0.5)
-    #frame2 = cv2.imencode('.jpg', img)[1].tobytes()    # 지금 frame2을 출력하고 있는 것
+    #frame2 = cv2.imencode('.jpg', img)[1].tobytes()   
     #yield (b'--frame\r\n'b'Content-Type: image/jpeg\r\n\r\n' + frame2 + b'\r\n')
 
     relative = True
@@ -81,7 +81,6 @@ def gen():
     with torch.no_grad():
         predictions = []
         source = torch.tensor(source_image[np.newaxis].astype(np.float32)).permute(0, 3, 1, 2)  # 모델에 들어감
-        # source가 모델에 들어가기 위해 tensor로 바뀌는데, 데이터 타입이 0~1사이인 것을 알 수 있음
 
         #if not cpu:
         #    source = source.cuda()
@@ -124,7 +123,7 @@ def gen():
                 im = cv2.cvtColor(im, cv2.COLOR_RGB2BGR)
                 joinedFrame = np.concatenate((cv2_source, im, frame1), axis=1)
 
-                #cv2.imshow('Test', im)   # im 나옴
+                #cv2.imshow('Test', im)   
                 #out1.write(img_as_ubyte(joinedFrame))
                 count += 1
 
@@ -135,7 +134,7 @@ def gen():
                 #ret, buffer = cv2.imencode('.jpg', img)
                 #frame = buffer.tobytes()
 
-                # cv2.imshow('Test', im)     # 잘 나옴
+                # cv2.imshow('Test', im)    
                 #cv2.imshow('Test', buffer)
 
                 #frame = cv2.imencode('.jpg', img)[1].tobytes()
@@ -148,7 +147,7 @@ def gen():
                 # time.sleep(0.3)
 
 
-                #cv2.imshow('Test2', frame2)   # 얘가 안나옴
+                #cv2.imshow('Test2', frame2)  
 
 
 
