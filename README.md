@@ -8,4 +8,5 @@
 
 3. pip install flask 등등 오류 뜨는 모듈 전부 설치
 
-4. python .\img_animation.py  --ip 0.0.0.0 --port 8000
+4. set FLASK_APP=stream_imag.py
+flask run --host=0.0.0.0
