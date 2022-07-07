@@ -10,3 +10,13 @@
 
 4. set FLASK_APP=stream_imag.py
 5. flask run --host=0.0.0.0
+
+
+
+
+웹소켓
+1. redis-cli 설치 https://velog.io/@6v6/%EC%9C%88%EB%8F%84%EC%9A%B0%EC%97%90-Redis-%EC%84%A4%EC%B9%98%ED%95%98%EA%B3%A0-Redis-cli%EB%A1%9C-%EC%A1%B0%ED%9A%8C%ED%95%98%EA%B8%B0
+2. requirements.txt 추가한 부분 설치
+3. python recorder.py
+4. python server.py
+5. http://127.0.0.1:9000/
