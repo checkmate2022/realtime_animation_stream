@@ -1,4 +1,4 @@
-# webrtc-opencv
+# realtime_animation_stream
 
 <a href="https://github.com/checkmate2022/Backend/wiki"><img width="240" alt="image" src="https://user-images.githubusercontent.com/62784314/197489630-3230add5-241b-4fa6-9282-ecd4811c1420.png"></a>  
 
